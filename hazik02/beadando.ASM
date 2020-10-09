@@ -25,7 +25,7 @@ MenuBevitel:
 				int	21h
 
 				mov	ah, 02h
-				mov dh, 3
+				mov dh, 10
 				int 10h
 
 				mov dx, offset ertek2
@@ -38,14 +38,14 @@ MenuBevitel:
 				mov dl, 0
 				int 10h
 
-				mov dx, offset menu1 ;menü - 1
+		mov dx, offset menu1 ;menü - 1
         mov ah,09
         int 21h
 
         mov ah,02h
         mov bh,0
         mov dh,11
-				mov dl,0
+		mov dl,0
         int 10h
 
         mov dx, offset menu2 ;menü - 2
@@ -78,6 +78,9 @@ MenuBevitel:
 				jmp MenuBevitel
 
 Bevitel:
+	mov	ax, 03h
+	int	10h
+	
 	xor	ax, ax
 	int	16h
 
