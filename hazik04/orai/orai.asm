@@ -53,7 +53,7 @@ Torles:
 	mov		ax, 03h
 	int 	10h
 
-Rajz:
+Rajzol:
 	mov		bx, di		; temporary register for parsing 16 to 8 bits
 	mov		dh, bl		; lower byte of di --> row coordinate
 	mov		bx, si
